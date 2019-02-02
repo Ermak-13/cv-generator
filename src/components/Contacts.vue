@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton';
+  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
 
   const ICONS = Object.freeze({
     phone: ['fas', 'mobile-alt'],

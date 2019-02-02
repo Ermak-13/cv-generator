@@ -25,9 +25,9 @@
 </template>
 
 <script>
-  import About from './About';
-  import FormField from './base/FormField';
-  import HTMLEditor from './base/HTMLEditor';
+  import About from './About.vue';
+  import FormField from './base/FormField.vue';
+  import HTMLEditor from './base/HTMLEditor.vue';
 
   export default {
     name: 'MainInfoModal',

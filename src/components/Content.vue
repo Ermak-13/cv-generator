@@ -6,6 +6,9 @@
       <MainInfo v-bind:isHiddenSettingsBtn="false" />
       <Contacts v-bind:isHiddenSettingsBtn="false" />
       <About v-bind:isHiddenSettingsBtn="false" />
+      <Languages
+        v-bind:isHiddenSettingsBtn="false"
+        v-bind:isHiddenRemoveBtn="true" />
     </div>
 
     <div
@@ -17,8 +20,9 @@
 
 <script>
   import MainInfo from './MainInfo.vue';
-  import Contacts from './Contacts.vue'
-  import About from './About.vue'
+  import Contacts from './Contacts.vue';
+  import About from './About.vue';
+  import Languages from './Languages.vue';
 
   export default {
     name: 'Content',
@@ -26,7 +30,8 @@
     components: {
       MainInfo,
       Contacts,
-      About
+      About,
+      Languages,
     },
     computed: {
       leftColStyles() {

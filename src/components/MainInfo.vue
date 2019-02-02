@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton';
+  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
 
   export default {
     name: 'MainInfo',

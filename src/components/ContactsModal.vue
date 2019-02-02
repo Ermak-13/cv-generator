@@ -47,9 +47,9 @@
 </template>
 
 <script>
-  import Contacts from './Contacts';
-  import FormField from './base/FormField'
-  import Input from './base/Input'
+  import Contacts from './Contacts.vue';
+  import FormField from './base/FormField.vue';
+  import Input from './base/Input.vue';
 
   export default {
     name: 'ContactsModal',

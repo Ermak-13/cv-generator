@@ -40,11 +40,11 @@
 </template>
 
 <script>
-  import MainInfo from './MainInfo';
-  import FormField from './base/FormField';
-  import Input from './base/Input';
-  import ImgInput from './base/ImgInput';
-  import HTMLEditor from './base/HTMLEditor';
+  import MainInfo from './MainInfo.vue';
+  import FormField from './base/FormField.vue';
+  import Input from './base/Input.vue';
+  import ImgInput from './base/ImgInput.vue';
+  import HTMLEditor from './base/HTMLEditor.vue';
 
   export default {
     name: 'MainInfoModal',

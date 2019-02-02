@@ -6,18 +6,20 @@
     <MainInfoModal />
     <ContactsModal />
     <AboutModal />
+    <LanguagesModal />
   </div>
 </template>
 
 <script>
 import 'normalize.css';
 
-import Content from './components/Content.vue'
-import Sidebar from './components/Sidebar.vue'
+import Content from './components/Content.vue';
+import Sidebar from './components/Sidebar.vue';
 
-import MainInfoModal from './components/MainInfoModal'
-import ContactsModal from './components/ContactsModal'
-import AboutModal from './components/AboutModal'
+import MainInfoModal from './components/MainInfoModal.vue';
+import ContactsModal from './components/ContactsModal.vue';
+import AboutModal from './components/AboutModal.vue';
+import LanguagesModal from './components/LanguagesModal.vue';
 
 export default {
   name: 'app',
@@ -28,6 +30,7 @@ export default {
     MainInfoModal,
     ContactsModal,
     AboutModal,
+    LanguagesModal,
   }
 }
 </script>
@@ -68,6 +71,7 @@ export default {
   }
 
   .section__h--modal {
+    padding-bottom: 5px;
     border-bottom: 1px solid;
   }
 
@@ -134,6 +138,12 @@ export default {
     border: 1px solid #ccc;
   }
 
+  .form__range {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+  }
+
   .form__textarea {
     box-sizing: border-box;
     width: 100%;
@@ -147,7 +157,6 @@ export default {
     display: inline-block;
     padding: 10px 20px;
     border-width: 0;
-    border-radius: 5px;
 
     background-color: #28a745;
     color: #ffffff;

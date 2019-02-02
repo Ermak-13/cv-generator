@@ -35,6 +35,23 @@ export default new Vuex.Store({
       phone: '+375 (29) 000-00-00',
       email: 'example@gmail.com',
       site: 'https://example.com'
+    },
+
+    languages: {
+      progressColor: '#64AF76',
+
+      items: [
+        {
+          language: 'Английский',
+          levelValue: 50,
+          levelLabel: 'Средний',
+        },
+        {
+          language: 'Русский',
+          levelValue: 100,
+          levelLabel: 'Родной',
+        }
+      ]
     }
   },
 
@@ -53,6 +70,18 @@ export default new Vuex.Store({
 
     updateAbout(state, about) {
       state.about = about;
+    },
+
+    updateLanguagesProgressColor(state, color) {
+      state.languages.progressColor = color;
+    },
+
+    addLanguage(state, language) {
+      state.languages.items.push(language);
+    },
+
+    removeLanguage(state, index) {
+      state.languages.items.splice(index, 1);
     }
   },
 

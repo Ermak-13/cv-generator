@@ -51,8 +51,8 @@
 </template>
 
 <script>
-  import FormField from './base/FormField';
-  import ColorInput from './base/ColorInput';
+  import FormField from './base/FormField.vue';
+  import ColorInput from './base/ColorInput.vue';
 
   export default {
     name: 'SettingsForm',
