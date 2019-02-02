@@ -36,7 +36,7 @@
 
           <td class="languages__td" v-if="!isHiddenRemoveBtn">
             <button
-              class="languages__remove-button"
+              class="remove-button"
               v-on:click="onClickRemoveBtn(i)">
               <font-awesome-icon :icon="['fas', 'times']" />
             </button>
@@ -122,16 +122,5 @@
     z-index: 1;
     font-size: 0.9em;
     font-style: italic;
-  }
-
-  .languages__remove-button {
-    padding: 0;
-    border-width: 0;
-    background-color: transparent;
-
-    font-size: 1.2em;
-    line-height: 1;
-    color: #dc3545;
-    cursor: pointer;
   }
 </style>

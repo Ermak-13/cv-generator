@@ -9,6 +9,9 @@
       <Languages
         v-bind:isHiddenSettingsBtn="false"
         v-bind:isHiddenRemoveBtn="true" />
+      <Skills
+        v-bind:isHiddenSettingsBtn="false"
+        v-bind:isHiddenRemoveBtn="true" />
     </div>
 
     <div
@@ -23,6 +26,7 @@
   import Contacts from './Contacts.vue';
   import About from './About.vue';
   import Languages from './Languages.vue';
+  import Skills from './Skills.vue';
 
   export default {
     name: 'Content',
@@ -32,7 +36,9 @@
       Contacts,
       About,
       Languages,
+      Skills,
     },
+
     computed: {
       leftColStyles() {
         return {

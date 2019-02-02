@@ -47,12 +47,22 @@ export default new Vuex.Store({
           levelLabel: 'Средний',
         },
         {
-          language: 'Русский',
+          language: 'Коальский',
           levelValue: 100,
           levelLabel: 'Родной',
         }
       ]
-    }
+    },
+
+    skills: [
+      'Умилять',
+      'Эвкалиптить',
+      'Спать',
+      'Лазить по деревьям',
+      'Улыбаться',
+      'Умилять 2.0',
+      'Зевать',
+    ]
   },
 
   mutations: {
@@ -82,6 +92,14 @@ export default new Vuex.Store({
 
     removeLanguage(state, index) {
       state.languages.items.splice(index, 1);
+    },
+
+    addSkill(state, value) {
+      state.skills.push(value);
+    },
+
+    removeSkill(state, index) {
+      state.skills.splice(index, 1);
     }
   },
 

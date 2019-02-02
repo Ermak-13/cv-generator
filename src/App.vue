@@ -7,6 +7,7 @@
     <ContactsModal />
     <AboutModal />
     <LanguagesModal />
+    <SkillsModal />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import MainInfoModal from './components/MainInfoModal.vue';
 import ContactsModal from './components/ContactsModal.vue';
 import AboutModal from './components/AboutModal.vue';
 import LanguagesModal from './components/LanguagesModal.vue';
+import SkillsModal from './components/SkillsModal.vue';
 
 export default {
   name: 'app',
@@ -31,6 +33,7 @@ export default {
     ContactsModal,
     AboutModal,
     LanguagesModal,
+    SkillsModal,
   }
 }
 </script>
@@ -194,6 +197,17 @@ export default {
     width: 1px;
     height: 1px;
     margin: -1px;
+  }
+
+  .remove-button {
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+
+    font-size: 1.2em;
+    line-height: 1;
+    color: #dc3545;
+    cursor: pointer;
   }
 
   @media print {
