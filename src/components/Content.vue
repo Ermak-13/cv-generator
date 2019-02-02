@@ -3,7 +3,8 @@
     <div
       class="content__left-col"
       v-bind:style="leftColStyles">
-      <MainInfo v-bind:isHiddenControls="false" />
+      <MainInfo v-bind:isHiddenSettingsBtn="false" />
+      <About v-bind:isHiddenSettingsBtn="false" />
     </div>
 
     <div
@@ -15,12 +16,14 @@
 
 <script>
   import MainInfo from './MainInfo.vue';
+  import About from './About.vue'
 
   export default {
     name: 'Content',
 
     components: {
-      MainInfo
+      MainInfo,
+      About
     },
     computed: {
       leftColStyles() {
@@ -52,6 +55,11 @@
     box-sizing: border-box;
     margin: 25px 0;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .content__left-col,
+  .content__right-col {
+    padding: 10px 0;
   }
 
   @media print {

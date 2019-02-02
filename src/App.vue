@@ -4,6 +4,7 @@
     <Sidebar />
 
     <MainInfoModal />
+    <AboutModal />
   </div>
 </template>
 
@@ -14,13 +15,16 @@ import Content from './components/Content.vue'
 import Sidebar from './components/Sidebar.vue'
 
 import MainInfoModal from './components/MainInfoModal'
+import AboutModal from './components/AboutModal'
 
 export default {
   name: 'app',
   components: {
     Content,
     Sidebar,
+
     MainInfoModal,
+    AboutModal,
   }
 }
 </script>
@@ -34,7 +38,7 @@ export default {
 
   body {
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -49,13 +53,19 @@ export default {
   }
 
   .section {
-    padding: 20px;
+    padding: 10px 20px;
     position: relative;
   }
 
   .section__h {
     margin: 0;
-    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  .section__h--modal {
+    border-bottom: 1px solid;
   }
 
   .section__settings-opener {
@@ -67,8 +77,8 @@ export default {
     padding: 0;
     border-width: 0;
     background-color: transparent;
-    font-size: 24px;
-    opacity: 0.75;
+    font-size: 18px;
+    opacity: 0.5;
     cursor: pointer;
     color: inherit;
   }
@@ -148,6 +158,20 @@ export default {
 
   .editor-html p {
     margin: 0;
+  }
+
+  .editor-html ul,
+  .editor-html ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .modal__content--2cols {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    margin: 30px;
   }
 </style>
 

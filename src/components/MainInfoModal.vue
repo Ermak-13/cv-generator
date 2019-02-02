@@ -3,9 +3,9 @@
     <div class="modal__content modal__content--2cols">
       <div class="modal__col">
         <section class="section">
-          <h1 class="section__h">Настройки</h1>
+          <h1 class="section__h section__h--modal">Настройки</h1>
 
-          <form class="" action="index.html" method="post">
+          <form class="form">
             <FormField label="Фотография:">
               <ImgInput
                 v-bind:value="undefined"
@@ -33,7 +33,7 @@
       </div>
 
       <div class="modal__col">
-        <MainInfo v-bind:isHiddenControls="true" />
+        <MainInfo v-bind:isHiddenSettingsBtn="true" />
       </div>
     </div>
   </modal>
@@ -78,16 +78,4 @@
 </script>
 
 <style scoped>
-  .modal__content {
-    display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
-    grid-gap: 10px;
-    align-items: center;
-    margin: 30px;
-  }
-
-  .section__h {
-    font-size: 24px;
-    border-bottom: 1px solid;
-  }
 </style>

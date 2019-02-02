@@ -1,12 +1,8 @@
 <template lang="html">
   <section class="main-info section">
-    <button
-      class="section__settings-opener"
-      type="button"
-      v-on:click="openSettingsModal"
-      v-if="!isHiddenControls">
-        <font-awesome-icon :icon="['fas', 'cog']" />
-      </button>
+    <SettingsOpenerButton
+      modalName="main-info"
+      v-if="!isHiddenSettingsBtn"/>
 
     <div class="main-info__img-wrapper">
       <img
@@ -27,14 +23,14 @@
 </template>
 
 <script>
+  import SettingsOpenerButton from './base/SettingsOpenerButton';
+
   export default {
     name: 'MainInfo',
-    props: ['isHiddenControls'],
+    props: ['isHiddenSettingsBtn'],
 
-    methods: {
-      openSettingsModal() {
-        this.$modal.show('main-info')
-      }
+    components: {
+      SettingsOpenerButton
     }
   }
 </script>

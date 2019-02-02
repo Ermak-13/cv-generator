@@ -17,10 +17,19 @@ export default new Vuex.Store({
     },
 
     mainInfo: {
-      img: 'https://pp.userapi.com/c624422/v624422110/28d50/7BXdEoBPxDM.jpg',
-      fullName: 'Иванов Иван',
-      position: 'Full Stack разработчик'
-    }
+      img: 'https://c1.staticflickr.com/4/3385/3338476021_e78f484164_b.jpg',
+      fullName: 'Коал Коалыч',
+      position: 'Поедатель эвкалипта'
+    },
+
+    about: `
+      <ul>
+        <li>могу хоть целыми днями есть эвкалипт</li>
+        <li>с первого взгляда распознаю где эвкалипт лучшего качества</li>
+        <li>своим милым видом хорошо привлекаю клиентов</li>
+        <li>и многое другое...</li>
+      </ul>
+    `
   },
 
   mutations: {
@@ -30,6 +39,10 @@ export default new Vuex.Store({
 
     updateMainInfo(state, mainInfo) {
       state.mainInfo = mainInfo;
+    },
+
+    updateAbout(state, about) {
+      state.about = about;
     }
   },
 
