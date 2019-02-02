@@ -4,6 +4,7 @@
       class="content__left-col"
       v-bind:style="leftColStyles">
       <MainInfo v-bind:isHiddenSettingsBtn="false" />
+      <Contacts v-bind:isHiddenSettingsBtn="false" />
       <About v-bind:isHiddenSettingsBtn="false" />
     </div>
 
@@ -16,6 +17,7 @@
 
 <script>
   import MainInfo from './MainInfo.vue';
+  import Contacts from './Contacts.vue'
   import About from './About.vue'
 
   export default {
@@ -23,6 +25,7 @@
 
     components: {
       MainInfo,
+      Contacts,
       About
     },
     computed: {

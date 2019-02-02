@@ -29,7 +29,13 @@ export default new Vuex.Store({
         <li>своим милым видом хорошо привлекаю клиентов</li>
         <li>и многое другое...</li>
       </ul>
-    `
+    `,
+
+    contacts: {
+      phone: '+375 (29) 000-00-00',
+      email: 'example@gmail.com',
+      site: 'https://example.com'
+    }
   },
 
   mutations: {
@@ -39,6 +45,10 @@ export default new Vuex.Store({
 
     updateMainInfo(state, mainInfo) {
       state.mainInfo = mainInfo;
+    },
+
+    updateContacts(state, contacts) {
+      state.contacts = contacts;
     },
 
     updateAbout(state, about) {

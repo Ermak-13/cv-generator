@@ -4,6 +4,7 @@
     <Sidebar />
 
     <MainInfoModal />
+    <ContactsModal />
     <AboutModal />
   </div>
 </template>
@@ -15,6 +16,7 @@ import Content from './components/Content.vue'
 import Sidebar from './components/Sidebar.vue'
 
 import MainInfoModal from './components/MainInfoModal'
+import ContactsModal from './components/ContactsModal'
 import AboutModal from './components/AboutModal'
 
 export default {
@@ -24,6 +26,7 @@ export default {
     Sidebar,
 
     MainInfoModal,
+    ContactsModal,
     AboutModal,
   }
 }
@@ -172,6 +175,22 @@ export default {
     grid-gap: 10px;
     align-items: center;
     margin: 30px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  @media print {
+    .section__settings-opener {
+      display: none;
+    }
   }
 </style>
 
