@@ -8,6 +8,7 @@
     <AboutModal />
     <LanguagesModal />
     <SkillsModal />
+    <EducationsModal />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import ContactsModal from './components/ContactsModal.vue';
 import AboutModal from './components/AboutModal.vue';
 import LanguagesModal from './components/LanguagesModal.vue';
 import SkillsModal from './components/SkillsModal.vue';
+import EducationsModal from './components/EducationsModal.vue';
 
 export default {
   name: 'app',
@@ -34,6 +36,7 @@ export default {
     AboutModal,
     LanguagesModal,
     SkillsModal,
+    EducationsModal,
   }
 }
 </script>

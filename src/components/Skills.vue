@@ -1,11 +1,8 @@
 <template lang="html">
-  <section class="skills section">
-    <SettingsOpenerButton
-      modalName="skills"
-      v-if="!isHiddenSettingsBtn" />
-
-    <h1 class="section__h">Навыки</h1>
-
+  <Section
+    name="skills"
+    title="Навыки"
+    v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <ul class="skills__list">
       <li
         class="skills__item"
@@ -21,18 +18,18 @@
         </button>
       </li>
     </ul>
-  </section>
+  </Section>
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
+  import Section from './base/Section.vue';
 
   export default {
     name: 'Skills',
     props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
 
     components: {
-      SettingsOpenerButton,
+      Section,
     },
 
     computed: {

@@ -12,6 +12,9 @@
       <Skills
         v-bind:isHiddenSettingsBtn="false"
         v-bind:isHiddenRemoveBtn="true" />
+      <Educations
+        v-bind:isHiddenSettingsBtn="false"
+        v-bind:isHiddenRemoveBtn="true" />
     </div>
 
     <div
@@ -27,6 +30,7 @@
   import About from './About.vue';
   import Languages from './Languages.vue';
   import Skills from './Skills.vue';
+  import Educations from './Educations.vue';
 
   export default {
     name: 'Content',
@@ -37,6 +41,7 @@
       About,
       Languages,
       Skills,
+      Educations,
     },
 
     computed: {

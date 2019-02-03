@@ -62,6 +62,16 @@ export default new Vuex.Store({
       'Улыбаться',
       'Умилять 2.0',
       'Зевать',
+    ],
+
+    educations: [
+      {
+        university: 'Австралийкий Эвкалиптовый Университет',
+        faculty: 'Эвкалиптоз',
+        degree: 'бакалавар',
+        startedAt: 2012,
+        finishedAt: 2017
+      }
     ]
   },
 
@@ -100,6 +110,14 @@ export default new Vuex.Store({
 
     removeSkill(state, index) {
       state.skills.splice(index, 1);
+    },
+
+    addEducation(state, education) {
+      state.educations.push(education);
+    },
+
+    removeEducation(state, index) {
+      state.educations.splice(index, 1);
     }
   },
 

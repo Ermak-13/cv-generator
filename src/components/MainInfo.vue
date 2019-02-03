@@ -1,9 +1,7 @@
 <template lang="html">
-  <section class="main-info section">
-    <SettingsOpenerButton
-      modalName="main-info"
-      v-if="!isHiddenSettingsBtn"/>
-
+  <Section
+    name="main-info"
+    v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <div class="main-info__img-wrapper">
       <img
         class="main-info__img"
@@ -19,18 +17,18 @@
       class="main-info__text editor-html"
       v-html="$store.state.mainInfo.position">
     </div>
-  </section>
+  </Section>
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
+  import Section from './base/Section.vue';
 
   export default {
     name: 'MainInfo',
     props: ['isHiddenSettingsBtn'],
 
     components: {
-      SettingsOpenerButton
+      Section,
     }
   }
 </script>

@@ -1,13 +1,8 @@
 <template lang="html">
-  <section class="languages section">
-    <SettingsOpenerButton
-      modalName="languages"
-      v-if="!isHiddenSettingsBtn" />
-
-    <h1 class="section__h">
-      Языки
-    </h1>
-
+  <Section
+    name="languages"
+    title="Языки"
+    v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <table class="languages__table">
       <thead class="languages__thead">
         <tr>
@@ -44,18 +39,18 @@
         </tr>
       </tbody>
     </table>
-  </section>
+  </Section>
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
+  import Section from './base/Section.vue';
 
   export default {
     name: 'Languages',
     props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
 
     components: {
-      SettingsOpenerButton
+      Section
     },
 
     computed: {

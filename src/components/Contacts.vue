@@ -1,11 +1,8 @@
 <template lang="html">
-  <section class="contacts section">
-    <SettingsOpenerButton
-      modalName="contacts"
-      v-if="!isHiddenSettingsBtn" />
-
-    <h1 class="section__h">Контакты</h1>
-
+  <Section
+    name="contacts"
+    title="Контакты"
+    v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <dl class="contacts__list">
       <div class="contacts__item" v-for="contact in contacts">
         <dt class="contacts__label">
@@ -21,11 +18,11 @@
         </dd>
       </div>
     </dl>
-  </section>
+  </Section>
 </template>
 
 <script>
-  import SettingsOpenerButton from './base/SettingsOpenerButton.vue';
+  import Section from './base/Section.vue';
 
   const ICONS = Object.freeze({
     phone: ['fas', 'mobile-alt'],
@@ -63,7 +60,7 @@
     props: ['isHiddenSettingsBtn'],
 
     components: {
-      SettingsOpenerButton
+      Section,
     },
 
     computed: {
