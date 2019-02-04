@@ -72,6 +72,33 @@ export default new Vuex.Store({
         startedAt: 2012,
         finishedAt: 2017
       }
+    ],
+
+    projects: [
+      {
+        title: 'Коалочкис',
+        href: 'https://www.savethekoala.com/',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Koala.jpg',
+        description: 'Фоточка коалы'
+      },
+      {
+        title: 'Эвкалиптус',
+        href: 'https://en.wikipedia.org/wiki/Eucalyptus',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Eucalyptus_leucophloia_habit.jpg',
+        description: 'Эвкализуйте эвкалипт'
+      },
+      {
+        title: 'Эвкалиптус',
+        href: 'https://en.wikipedia.org/wiki/Eucalyptus',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Eucalyptus_leucophloia_habit.jpg',
+        description: 'Эвкализуйте эвкалипт'
+      },
+      {
+        title: 'Коалочкис',
+        href: 'https://www.savethekoala.com/',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Koala.jpg',
+        description: 'Фоточка коалы'
+      }
     ]
   },
 
@@ -118,6 +145,14 @@ export default new Vuex.Store({
 
     removeEducation(state, index) {
       state.educations.splice(index, 1);
+    },
+
+    addProject(state, project) {
+      state.projects.push(project);
+    },
+
+    removeProject(state, index) {
+      state.projects.splice(index, 1);
     }
   },
 

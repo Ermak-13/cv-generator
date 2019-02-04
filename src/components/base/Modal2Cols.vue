@@ -1,5 +1,9 @@
 <template lang="html">
-  <modal v-bind:name="name" width="800" height="auto">
+  <modal
+    width="800"
+    height="auto"
+    v-bind:scrollable="true"
+    v-bind:name="name">
     <div class="modal__content modal__content--2cols">
       <slot></slot>
     </div>

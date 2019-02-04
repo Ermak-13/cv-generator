@@ -20,6 +20,9 @@
     <div
       class="content__right-col"
       v-bind:style="rightColStyles">
+      <Projects
+        v-bind:isHiddenSettingsBtn="false"
+        v-bind:isHiddenRemoveBtn="true" />
     </div>
   </div>
 </template>
@@ -31,6 +34,7 @@
   import Languages from './Languages.vue';
   import Skills from './Skills.vue';
   import Educations from './Educations.vue';
+  import Projects from './Projects.vue';
 
   export default {
     name: 'Content',
@@ -42,6 +46,7 @@
       Languages,
       Skills,
       Educations,
+      Projects,
     },
 
     computed: {
