@@ -103,7 +103,7 @@
     align-items: center;
     justify-content: center;
 
-    height: 210px;
+    height: 200px;
     margin-bottom: 10px;
     overflow: hidden;
   }
@@ -138,5 +138,7 @@
     font-style: italic;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: inherit;
+    opacity: 0.6;
   }
 </style>

@@ -73,7 +73,7 @@
     list-style: none;
   }
 
-  .jobs__item {
+  .jobs__item:not(:last-child) {
     margin-bottom: 20px;
   }
 

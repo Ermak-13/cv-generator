@@ -96,7 +96,7 @@
 
   .content__left-col,
   .content__right-col {
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
   .drag__area {

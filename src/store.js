@@ -32,24 +32,25 @@ export default new Vuex.Store({
     },
 
     mainInfo: {
-      img: 'https://c1.staticflickr.com/4/3385/3338476021_e78f484164_b.jpg',
+      img: './avatar.png',
       fullName: 'Коал Коалыч',
-      position: 'Поедатель эвкалипта'
+      position: 'Сомелье Эвкалипта'
     },
 
     about: `
-      <ul>
-        <li>могу хоть целыми днями есть эвкалипт</li>
-        <li>с первого взгляда распознаю где эвкалипт лучшего качества</li>
-        <li>своим милым видом хорошо привлекаю клиентов</li>
-        <li>и многое другое...</li>
-      </ul>
+      <p>
+        Имею очееень спокойную жизненную позицию. Считаю, что
+        эвкалипт нужно дегустировать размеренно и нельзя никуда торопиться.
+      </p>
+      <p>
+        Участвовал в движение "Эвкализуйте легалипт".
+      </p>
     `,
 
     contacts: {
       phone: '+375 (29) 000-00-00',
       email: 'example@gmail.com',
-      site: 'https://example.com'
+      site: 'https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B0%D0%BB%D0%B0'
     },
 
     languages: {
@@ -71,12 +72,15 @@ export default new Vuex.Store({
 
     skills: [
       'Умилять',
-      'Эвкалиптить',
       'Спать',
-      'Лазить по деревьям',
+      'Есть',
+      'Спать 2.0',
+      'Лазить по деревья',
+      'Промоутерить эвкалипт',
+      'Логистика поставок эвкалипта',
+      'Дегустировать',
       'Улыбаться',
-      'Умилять 2.0',
-      'Зевать',
+      'Залазить на ручки',
     ],
 
     educations: [
@@ -85,51 +89,70 @@ export default new Vuex.Store({
         faculty: 'Эвкалиптоз',
         degree: 'бакалавар',
         startedAt: 2012,
+        finishedAt: 2016
+      },
+      {
+        university: 'Австралийкий Эвкалиптовый Университет',
+        faculty: 'Эвкалиптоз',
+        degree: 'магистр',
+        startedAt: 2016,
         finishedAt: 2017
       }
     ],
 
     projects: [
       {
-        title: 'Коалочкис',
-        href: 'https://www.savethekoala.com/',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Koala.jpg',
-        description: 'Фоточка коалы'
+        title: 'А ну прыгай отсюда!',
+        href: 'https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D0%BD%D0%B3%D1%83%D1%80%D1%83',
+        img: './project01.jpeg',
+        description: '<p><b>Прогоняю</b> конкурента-кенгуру</p>'
       },
       {
-        title: 'Эвкалиптус',
+        title: 'Эвкалиптиссимо',
         href: 'https://en.wikipedia.org/wiki/Eucalyptus',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Eucalyptus_leucophloia_habit.jpg',
-        description: 'Эвкализуйте эвкалипт'
+        img: './project02.jpeg',
+        description: '<p><b>Дегустация</b> волшебного эвкалипта</p>'
       },
       {
-        title: 'Эвкалиптус',
+        title: 'Мой первый эвкалипт',
         href: 'https://en.wikipedia.org/wiki/Eucalyptus',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/6/63/Eucalyptus_leucophloia_habit.jpg',
-        description: 'Эвкализуйте эвкалипт'
+        img: './project03.jpeg',
+        description: '<p><b>Менеджмент</b> моего 1-го дерева</p>'
       },
       {
-        title: 'Коалочкис',
-        href: 'https://www.savethekoala.com/',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Koala.jpg',
-        description: 'Фоточка коалы'
+        title: 'Эвкалиптовая "разведка"',
+        href: 'https://en.wikipedia.org/wiki/Eucalyptus',
+        img: './project04.jpeg',
+        description: '<p><b>Поиск</b> точек роста</p>'
       }
     ],
 
     jobs: [
       {
-        company: 'ООО "Южный лес"',
-        position: 'Сортировщик эвкалипта',
-        startedAt: 'август 2014',
-        finishedAt: 'декабрь 2017',
-        description: '<p>В мои обязанности входило сортировка по качеству эвкалипта</p>'
+        company: 'ООО "Австралийский парк"',
+        position: 'Младший Cомелье Эвкалипта',
+        startedAt: 'июнь 2017',
+        finishedAt: 'май 2018',
+        description: `
+          <p>В мои обязанности входило:</p>
+          <ul>
+            <li><b>Следовать</b> за "Старшим" Сомелье</li>
+            <li><b>Мешать</b> конкурентам заползти на наше дерево</li>
+          </ul>
+        `
       },
       {
         company: 'ООО "Австралийский парк"',
-        position: 'Поедатель эвкалипта',
-        startedAt: 'декабрь 2017',
+        position: 'Старший Сомелье эвкалипта',
+        startedAt: 'май 2018',
         finishedAt: '',
-        description: '<p>В мои обязанности входило дегустация эвкалипта</p>'
+        description: `
+          <p>В мои обязанности входит:</p>
+          <ul>
+            <li><b>Управление</b> собственным эвкалиптом</li>
+            <li><b>Поиск</b> перспективного эвкалипта</li>
+          </ul>
+        `
       }
     ]
   },
