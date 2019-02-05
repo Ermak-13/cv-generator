@@ -43,7 +43,16 @@
 
   export default {
     name: 'Educations',
-    props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      },
+      isHiddenRemoveBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section,

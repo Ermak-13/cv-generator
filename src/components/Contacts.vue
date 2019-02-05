@@ -4,7 +4,9 @@
     title="Контакты"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <dl class="contacts__list">
-      <div class="contacts__item" v-for="contact in contacts">
+      <div class="contacts__item"
+        v-for="contact in contacts"
+        v-bind:key="contact.key">
         <dt class="contacts__label">
           <font-awesome-icon :icon="contact.icon" />
           <span class="visually-hidden">{{ contact.label }}</span>
@@ -57,7 +59,12 @@
 
   export default {
     name: 'Contacts',
-    props: ['isHiddenSettingsBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false,
+      }
+    },
 
     components: {
       Section,
@@ -68,6 +75,7 @@
         return this.actualContacts.map((contact) => {
           let value = this.$store.state.contacts[contact];
           return {
+            key: contact,
             icon: ICONS[contact],
             label: LABELS[contact],
             value: VALUES[contact](value),

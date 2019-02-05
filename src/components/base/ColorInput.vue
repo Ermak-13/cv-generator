@@ -9,7 +9,9 @@
 <script>
   export default {
     name: 'ColorInput',
-    props: ['value']
+    props: {
+      value: String
+    }
   }
 </script>
 

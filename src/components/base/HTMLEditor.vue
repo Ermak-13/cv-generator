@@ -11,7 +11,9 @@
 
   export default {
     name: 'HTMLEditor',
-    props: ['value'],
+    props: {
+      value: String
+    },
 
     components: {
       VueEditor

@@ -7,7 +7,7 @@
       <li
         class="skills__item"
         v-bind:style="skillStyles"
-        v-for="skill in $store.state.skills">
+        v-for="(skill, i) in $store.state.skills">
         {{ skill }}
 
         <button
@@ -26,7 +26,16 @@
 
   export default {
     name: 'Skills',
-    props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      },
+      isHiddenRemoveBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section,

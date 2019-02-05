@@ -25,7 +25,12 @@
 
   export default {
     name: 'MainInfo',
-    props: ['isHiddenSettingsBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section,

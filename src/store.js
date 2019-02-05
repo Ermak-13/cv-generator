@@ -9,18 +9,10 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
 
   state: {
-    settings: {
-      leftColBGColor: '#000000',
-      leftColColor: '#ffffff',
-      rightColBGColor: '#ffffff',
-      rightColColor: '#000000',
-    },
-
     layout: {
       leftCol: [
         'MainInfo',
         'Contacts',
-        'About',
         'Languages',
         'Skills',
         'Educations'
@@ -28,7 +20,15 @@ export default new Vuex.Store({
       rightCol: [
         'Jobs',
         'Projects',
+        'About',
       ],
+    },
+
+    settings: {
+      leftColBGColor: '#000000',
+      leftColColor: '#ffffff',
+      rightColBGColor: '#ffffff',
+      rightColColor: '#000000',
     },
 
     mainInfo: {
@@ -135,6 +135,14 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    updateLayoutLeftCol(state, leftCol) {
+      state.layout.leftCol = leftCol;
+    },
+
+    updateLayoutRightCol(state, rightCol) {
+      state.layout.rightCol = rightCol;
+    },
+
     updateSettings(state, settings) {
       state.settings = settings;
     },

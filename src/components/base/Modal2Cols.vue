@@ -13,14 +13,20 @@
 <script>
   export default {
     name: 'Modal2Cols',
-    props: ['name', 'align'],
+    props: {
+      name: String,
+      align: {
+        type: String,
+        default: 'center'
+      }
+    },
 
     computed: {
       contentStyles() {
         return {
           'start': 'modal__content modal__content--2cols modal__content--start',
           'center': 'modal__content modal__content--2cols modal__content--center',
-        }[this.align] || 'modal__content modal__content--2cols modal__content--center';
+        }[this.align];
       }
     }
   }

@@ -10,7 +10,12 @@
 <script>
   export default {
     name: 'SettingsOpenerButton',
-    props: ['modalName'],
+    props: {
+      modalName: {
+        type: String,
+        required: true
+      }
+    },
 
     methods: {
       onClickButton() {

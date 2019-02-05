@@ -14,7 +14,12 @@
 
   export default {
     name: 'About',
-    props: ['isHiddenSettingsBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section

@@ -11,7 +11,10 @@
 <script>
   export default {
     name: 'FormField',
-    props: ['name', 'label']
+    props: {
+      name: String,
+      label: String
+    }
   }
 </script>
 

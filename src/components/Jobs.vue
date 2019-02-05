@@ -37,7 +37,16 @@
 
   export default {
     name: 'Jobs',
-    props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      },
+      isHiddenRemoveBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section

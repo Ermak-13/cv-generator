@@ -18,7 +18,17 @@
   import SettingsOpenerButton from './SettingsOpenerButton.vue';
   export default {
     name: 'Section',
-    props: ['name', 'title', 'isHiddenSettingsBtn'],
+    props: {
+      name: {
+        type: String,
+        required: true
+      },
+      title: String,
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       SettingsOpenerButton

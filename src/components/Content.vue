@@ -1,30 +1,44 @@
 <template lang="html">
-  <div class="content">
+  <div class="content drag">
     <div
       class="content__left-col"
       v-bind:style="leftColStyles">
-      <SectionDispatcher
-        v-bind:type="section"
-        v-for="(section, i) in $store.state.layout.leftCol" />
+      <draggable
+        class="drag__area"
+        v-model='leftColList'
+        v-bind:options="{group:'sections'}">
+          <SectionDispatcher
+            v-bind:type="section"
+            v-for="(section, i) in leftColList"
+            v-bind:key="section" />
+      </draggable>
     </div>
 
     <div
       class="content__right-col"
       v-bind:style="rightColStyles">
-      <SectionDispatcher
-        v-bind:type="section"
-        v-for="(section, i) in $store.state.layout.rightCol" />
+      <draggable
+        class="drag__area"
+        v-model="rightColList"
+        v-bind:options="{group:'sections'}">
+          <SectionDispatcher
+            v-bind:type="section"
+            v-for="(section, i) in rightColList"
+            v-bind:key="section" />
+      </draggable>
     </div>
   </div>
 </template>
 
 <script>
+  import draggable from 'vuedraggable';
   import SectionDispatcher from './SectionDispatcher.vue';
 
   export default {
     name: 'Content',
 
     components: {
+      draggable,
       SectionDispatcher,
     },
 
@@ -39,6 +53,26 @@
         return {
           backgroundColor: this.$store.state.settings.rightColBGColor,
           color: this.$store.state.settings.rightColColor
+        }
+      },
+
+      leftColList: {
+        get() {
+          return this.$store.state.layout.leftCol;
+        },
+
+        set(value) {
+          this.$store.commit('updateLayoutLeftCol', value);
+        }
+      },
+
+      rightColList: {
+        get() {
+          return this.$store.state.layout.rightCol;
+        },
+
+        set(value) {
+          this.$store.commit('updateLayoutRightCol', value);
         }
       }
     }
@@ -63,6 +97,10 @@
   .content__left-col,
   .content__right-col {
     padding: 10px 0;
+  }
+
+  .drag__area {
+    min-height: 100px;
   }
 
   @media print {

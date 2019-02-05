@@ -47,7 +47,16 @@
 
   export default {
     name: 'Languages',
-    props: ['isHiddenSettingsBtn', 'isHiddenRemoveBtn'],
+    props: {
+      isHiddenSettingsBtn: {
+        type: Boolean,
+        default: false
+      },
+      isHiddenRemoveBtn: {
+        type: Boolean,
+        default: false
+      }
+    },
 
     components: {
       Section

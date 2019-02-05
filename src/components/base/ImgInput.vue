@@ -10,7 +10,9 @@
 <script>
   export default {
     name: 'ImgInput',
-    props: ['value'],
+    props: {
+      value: String
+    },
 
     methods: {
       onUploadFile(event) {
