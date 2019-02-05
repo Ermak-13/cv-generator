@@ -39,18 +39,20 @@
           <div class="educations__period-grid">
             <FormField
               name="educations__started-at"
-              label="Начало:">
+              label="Начало (год):">
               <Input
                 id="educations__started-at"
+                type="number"
                 v-bind:value="startedAt"
                 v-on:input="onInputData('startedAt', $event)" />
             </FormField>
 
             <FormField
               name="educations__finished-at"
-              label="Конец:">
+              label="Конец (год):">
               <Input
                 id="educations__finished-at"
+                type="number"
                 v-bind:value="finishedAt"
                 v-on:input="onInputData('finishedAt', $event)" />
             </FormField>

@@ -23,6 +23,9 @@
       <Projects
         v-bind:isHiddenSettingsBtn="false"
         v-bind:isHiddenRemoveBtn="true" />
+      <Jobs
+        v-bind:isHiddenSettingsBtn="false"
+        v-bind:isHiddenRemoveBtn="true" />
     </div>
   </div>
 </template>
@@ -35,6 +38,7 @@
   import Skills from './Skills.vue';
   import Educations from './Educations.vue';
   import Projects from './Projects.vue';
+  import Jobs from './Jobs.vue';
 
   export default {
     name: 'Content',
@@ -47,6 +51,7 @@
       Skills,
       Educations,
       Projects,
+      Jobs,
     },
 
     computed: {

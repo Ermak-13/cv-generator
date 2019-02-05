@@ -1,5 +1,7 @@
 <template lang="html">
-  <Modal2Cols name="projects">
+  <Modal2Cols
+    name="projects"
+    align="start">
     <div class="modal__col">
       <section class="section">
         <h1 class="section__h section__h--modal">
@@ -81,15 +83,19 @@
     },
 
     data() {
-      return {
-        title: '',
-        href: '',
-        img: null,
-        description: ''
-      }
+      return this.initData();
     },
 
     methods: {
+      initData() {
+        return {
+          title: '',
+          href: '',
+          img: null,
+          description: ''
+        };
+      },
+
       onSubmit(e) {
         e.preventDefault();
 
@@ -100,14 +106,23 @@
           description: this.description
         };
         this.$store.commit('addProject', project);
+
+        this.clearData();
       },
 
       onInputData(type, value) {
         this[type] = value;
+      },
+
+      clearData() {
+        let data = this.initData();
+        Object.keys(data).forEach((key) => {
+          this[key] = data[key];
+        });
       }
     }
   }
 </script>
 
-<style>
+<style scoped>
 </style>

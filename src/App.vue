@@ -10,6 +10,7 @@
     <SkillsModal />
     <EducationsModal />
     <ProjectsModal />
+    <JobsModal />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import LanguagesModal from './components/LanguagesModal.vue';
 import SkillsModal from './components/SkillsModal.vue';
 import EducationsModal from './components/EducationsModal.vue';
 import ProjectsModal from './components/ProjectsModal.vue';
+import JobsModal from './components/JobsModal.vue';
 
 export default {
   name: 'app',
@@ -40,6 +42,7 @@ export default {
     SkillsModal,
     EducationsModal,
     ProjectsModal,
+    JobsModal,
   }
 }
 </script>
@@ -185,14 +188,6 @@ export default {
   .editor-html ol {
     margin: 0;
     padding-left: 20px;
-  }
-
-  .modal__content--2cols {
-    display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
-    grid-gap: 10px;
-    align-items: center;
-    margin: 30px;
   }
 
   .visually-hidden {

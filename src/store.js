@@ -99,6 +99,23 @@ export default new Vuex.Store({
         img: 'https://upload.wikimedia.org/wikipedia/commons/0/06/Koala.jpg',
         description: 'Фоточка коалы'
       }
+    ],
+
+    jobs: [
+      {
+        company: 'ООО "Южный лес"',
+        position: 'Сортировщик эвкалипта',
+        startedAt: 'август 2014',
+        finishedAt: 'декабрь 2017',
+        description: '<p>В мои обязанности входило сортировка по качеству эвкалипта</p>'
+      },
+      {
+        company: 'ООО "Австралийский парк"',
+        position: 'Поедатель эвкалипта',
+        startedAt: 'декабрь 2017',
+        finishedAt: '',
+        description: '<p>В мои обязанности входило дегустация эвкалипта</p>'
+      }
     ]
   },
 
@@ -153,6 +170,14 @@ export default new Vuex.Store({
 
     removeProject(state, index) {
       state.projects.splice(index, 1);
+    },
+
+    addJob(state, job) {
+      state.jobs.push(job);
+    },
+
+    removeJob(state, index) {
+      state.jobs.splice(index, 1);
     }
   },
 

@@ -25,14 +25,14 @@
           <p class="education__description">
             {{ description(education) }}
           </p>
-        </article>
 
-        <button
-          class="education__remove-button remove-button"
-          v-on:click="onClickRemoveBtn(education.index)"
-          v-if="!isHiddenRemoveBtn">
-          <font-awesome-icon :icon="['fas', 'times']" />
-        </button>
+          <button
+            class="education__remove-button remove-button"
+            v-on:click="onClickRemoveBtn(education.index)"
+            v-if="!isHiddenRemoveBtn">
+            <font-awesome-icon :icon="['fas', 'times']" />
+          </button>
+        </article>
       </li>
     </ol>
   </Section>
@@ -58,7 +58,7 @@
             return x;
           })
           .sort((a, b) => {
-            a.startedAt - b.startedAt
+            return a.startedAt - b.startedAt;
           });
       },
 
