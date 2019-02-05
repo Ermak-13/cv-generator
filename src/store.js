@@ -16,6 +16,21 @@ export default new Vuex.Store({
       rightColColor: '#000000',
     },
 
+    layout: {
+      leftCol: [
+        'MainInfo',
+        'Contacts',
+        'About',
+        'Languages',
+        'Skills',
+        'Educations'
+      ],
+      rightCol: [
+        'Jobs',
+        'Projects',
+      ],
+    },
+
     mainInfo: {
       img: 'https://c1.staticflickr.com/4/3385/3338476021_e78f484164_b.jpg',
       fullName: 'Коал Коалыч',

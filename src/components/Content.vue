@@ -3,55 +3,29 @@
     <div
       class="content__left-col"
       v-bind:style="leftColStyles">
-      <MainInfo v-bind:isHiddenSettingsBtn="false" />
-      <Contacts v-bind:isHiddenSettingsBtn="false" />
-      <About v-bind:isHiddenSettingsBtn="false" />
-      <Languages
-        v-bind:isHiddenSettingsBtn="false"
-        v-bind:isHiddenRemoveBtn="true" />
-      <Skills
-        v-bind:isHiddenSettingsBtn="false"
-        v-bind:isHiddenRemoveBtn="true" />
-      <Educations
-        v-bind:isHiddenSettingsBtn="false"
-        v-bind:isHiddenRemoveBtn="true" />
+      <SectionDispatcher
+        v-bind:type="section"
+        v-for="(section, i) in $store.state.layout.leftCol" />
     </div>
 
     <div
       class="content__right-col"
       v-bind:style="rightColStyles">
-      <Projects
-        v-bind:isHiddenSettingsBtn="false"
-        v-bind:isHiddenRemoveBtn="true" />
-      <Jobs
-        v-bind:isHiddenSettingsBtn="false"
-        v-bind:isHiddenRemoveBtn="true" />
+      <SectionDispatcher
+        v-bind:type="section"
+        v-for="(section, i) in $store.state.layout.rightCol" />
     </div>
   </div>
 </template>
 
 <script>
-  import MainInfo from './MainInfo.vue';
-  import Contacts from './Contacts.vue';
-  import About from './About.vue';
-  import Languages from './Languages.vue';
-  import Skills from './Skills.vue';
-  import Educations from './Educations.vue';
-  import Projects from './Projects.vue';
-  import Jobs from './Jobs.vue';
+  import SectionDispatcher from './SectionDispatcher.vue';
 
   export default {
     name: 'Content',
 
     components: {
-      MainInfo,
-      Contacts,
-      About,
-      Languages,
-      Skills,
-      Educations,
-      Projects,
-      Jobs,
+      SectionDispatcher,
     },
 
     computed: {
