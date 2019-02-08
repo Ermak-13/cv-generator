@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import avatar from './assets/avatar.png';
+import projectImg01 from './assets/project01.jpeg';
+import projectImg02 from './assets/project02.jpeg';
+import projectImg03 from './assets/project03.jpeg';
+import projectImg04 from './assets/project04.jpeg';
+
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
@@ -32,7 +38,7 @@ export default new Vuex.Store({
     },
 
     mainInfo: {
-      img: './avatar.png',
+      img: avatar,
       fullName: 'Коал Коалыч',
       position: 'Сомелье Эвкалипта'
     },
@@ -104,25 +110,25 @@ export default new Vuex.Store({
       {
         title: 'А ну прыгай отсюда!',
         href: 'https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D0%BD%D0%B3%D1%83%D1%80%D1%83',
-        img: './project01.jpeg',
+        img: projectImg01,
         description: '<p><b>Прогоняю</b> конкурента-кенгуру</p>'
       },
       {
         title: 'Эвкалиптиссимо',
         href: 'https://en.wikipedia.org/wiki/Eucalyptus',
-        img: './project02.jpeg',
+        img: projectImg02,
         description: '<p><b>Дегустация</b> волшебного эвкалипта</p>'
       },
       {
         title: 'Мой первый эвкалипт',
         href: 'https://en.wikipedia.org/wiki/Eucalyptus',
-        img: './project03.jpeg',
+        img: projectImg03,
         description: '<p><b>Менеджмент</b> моего 1-го дерева</p>'
       },
       {
         title: 'Эвкалиптовая "разведка"',
         href: 'https://en.wikipedia.org/wiki/Eucalyptus',
-        img: './project04.jpeg',
+        img: projectImg04,
         description: '<p><b>Поиск</b> точек роста</p>'
       }
     ],
