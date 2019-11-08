@@ -9,7 +9,7 @@
         v-bind:options="{group:'sections'}">
           <SectionDispatcher
             v-bind:type="section"
-            v-for="(section, i) in leftColList"
+            v-for="(section) in leftColList"
             v-bind:key="section" />
       </draggable>
     </div>
@@ -23,7 +23,7 @@
         v-bind:options="{group:'sections'}">
           <SectionDispatcher
             v-bind:type="section"
-            v-for="(section, i) in rightColList"
+            v-for="(section) in rightColList"
             v-bind:key="section" />
       </draggable>
     </div>
