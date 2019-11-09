@@ -4,12 +4,12 @@
       CV Generator
     </h1>
 
-    <SettingsForm />
-
     <p>
       Блоки/секции можно перетаскивать и располагать в
       наилучшим для вас виде.
     </p>
+
+    <SettingsForm />
 
     <DownloadButton />
   </aside>

@@ -15,6 +15,18 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
 
   state: {
+    enabledP2: false,
+    enabledBlocks: [
+      'MainInfo',
+      'Contacts',
+      'Languages',
+      'Skills',
+      'Educations',
+      'Jobs',
+      'Projects',
+      'About'
+    ],
+
     layout: {
       leftCol: [
         'MainInfo',
@@ -28,6 +40,8 @@ export default new Vuex.Store({
         'Projects',
         'About',
       ],
+      leftP2Col: [],
+      rightP2Col: []
     },
 
     settings: {
@@ -150,12 +164,38 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    toggleP2(state) {
+      state.enabledP2 = !state.enabledP2;
+    },
+
+    enableBlock(state, block) {
+      const unique = new Set(state.enabledBlocks);
+      unique.add(block);
+
+      state.enabledBlocks = Array.from(unique);
+    },
+
+    disableBlock(state, block) {
+      const unique = new Set(state.enabledBlocks);
+      unique.delete(block);
+
+      state.enabledBlocks = Array.from(unique);
+    },
+
     updateLayoutLeftCol(state, leftCol) {
       state.layout.leftCol = leftCol;
     },
 
     updateLayoutRightCol(state, rightCol) {
       state.layout.rightCol = rightCol;
+    },
+
+    updateLayoutLeftP2Col(state, leftP2Col) {
+      state.layout.leftP2Col = leftP2Col;
+    },
+
+    updateLayoutRightP2Col(state, rightP2Col) {
+      state.layout.rightP2Col = rightP2Col;
     },
 
     updateSettings(state, settings) {
@@ -217,8 +257,5 @@ export default new Vuex.Store({
     removeJob(state, index) {
       state.jobs.splice(index, 1);
     }
-  },
-
-  actions: {
   }
 })

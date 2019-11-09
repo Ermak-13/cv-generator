@@ -1,31 +1,65 @@
 <template lang="html">
   <div class="content drag">
-    <div
-      class="content__left-col"
-      v-bind:style="leftColStyles">
-      <draggable
-        class="drag__area"
-        v-model='leftColList'
-        v-bind:options="{group:'sections'}">
+    <div class="page">
+      <div
+        class="page__left-col"
+        v-bind:style="leftColStyles">
+        <draggable
+          class="drag__area"
+          v-model='leftColList'
+          v-bind:options="{group:'sections'}">
           <SectionDispatcher
             v-bind:type="section"
             v-for="(section) in leftColList"
             v-bind:key="section" />
-      </draggable>
-    </div>
+        </draggable>
+      </div>
 
-    <div
-      class="content__right-col"
-      v-bind:style="rightColStyles">
-      <draggable
-        class="drag__area"
-        v-model="rightColList"
-        v-bind:options="{group:'sections'}">
+      <div
+        class="page__right-col"
+        v-bind:style="rightColStyles">
+        <draggable
+          class="drag__area"
+          v-model="rightColList"
+          v-bind:options="{group:'sections'}">
           <SectionDispatcher
             v-bind:type="section"
             v-for="(section) in rightColList"
             v-bind:key="section" />
-      </draggable>
+        </draggable>
+      </div>
+    </div>
+
+    <div
+      class="page"
+      v-if="isPage2Enabled">
+      <div
+        class="page__left-col"
+        v-bind:style="leftColStyles">
+        <draggable
+          class="drag__area"
+          v-model='leftP2ColList'
+          v-bind:options="{group:'sections'}">
+          <SectionDispatcher
+            v-bind:type="section"
+            v-for="(section) in leftP2ColList"
+            v-bind:key="section" />
+        </draggable>
+      </div>
+
+      <div
+        class="page__right-col"
+        v-bind:style="rightColStyles">
+        <draggable
+          class="drag__area"
+          v-model='rightP2ColList'
+          v-bind:options="{group:'sections'}">
+          <SectionDispatcher
+            v-bind:type="section"
+            v-for="(section) in rightP2ColList"
+            v-bind:key="section" />
+        </draggable>
+      </div>
     </div>
   </div>
 </template>
@@ -43,6 +77,10 @@
     },
 
     computed: {
+      isPage2Enabled() {
+        return this.$store.state.enabledP2;
+      },
+
       leftColStyles() {
         return {
           backgroundColor: this.$store.state.settings.leftColBGColor,
@@ -58,7 +96,7 @@
 
       leftColList: {
         get() {
-          return this.$store.state.layout.leftCol;
+          return this.$store.state.layout.leftCol.filter(this.isEnabledBlock);
         },
 
         set(value) {
@@ -68,12 +106,38 @@
 
       rightColList: {
         get() {
-          return this.$store.state.layout.rightCol;
+          return this.$store.state.layout.rightCol.filter(this.isEnabledBlock);
         },
 
         set(value) {
           this.$store.commit('updateLayoutRightCol', value);
         }
+      },
+
+      leftP2ColList: {
+        get() {
+          return this.$store.state.layout.leftP2Col.filter(this.isEnabledBlock);
+        },
+
+        set(value) {
+          this.$store.commit('updateLayoutLeftP2Col', value);
+        }
+      },
+
+      rightP2ColList: {
+        get() {
+          return this.$store.state.layout.rightP2Col.filter(this.isEnabledBlock);
+        },
+
+        set(value) {
+          this.$store.commit('updateLayoutRightP2Col', value);
+        }
+      }
+    },
+
+    methods: {
+      isEnabledBlock(block) {
+        return this.$store.state.enabledBlocks.includes(block);
       }
     }
   }
@@ -82,7 +146,9 @@
 <style scoped>
   .content {
     grid-area: content;
+  }
 
+  .page {
     display: grid;
     width: 210mm;
     min-height: 297mm;
@@ -90,12 +156,12 @@
     grid-template-columns: 275px 1fr;
 
     box-sizing: border-box;
-    margin: 25px 0;
+    margin: 25px 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .content__left-col,
-  .content__right-col {
+  .page__left-col,
+  .page__right-col {
     padding: 20px 0;
   }
 
@@ -104,7 +170,7 @@
   }
 
   @media print {
-    .content {
+    .page {
       margin: 0;
     }
   }

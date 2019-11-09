@@ -47,18 +47,48 @@
         </FormField>
       </div>
     </fieldset>
+
+    <fieldset class="form__fieldset">
+      <div class="form__fieldset-content">
+        <Toggle
+          label="Нужна 2-ая страница?"
+          v-bind:value="$store.state.enabledP2"
+          v-on:input="togglePage2()" />
+      </div>
+    </fieldset>
+
+    <fieldset class="form__fieldset">
+      <legend class="form__legend">Блоки</legend>
+
+      <div class="form__fieldset-content">
+        <Toggle
+          v-for="block in allBlocks"
+          v-bind:key="block"
+          v-bind:label="block"
+          v-bind:value="isEnabledBlock(block)"
+          v-on:input="toggleBlock(block)" />
+      </div>
+    </fieldset>
   </form>
 </template>
 
 <script>
   import FormField from './base/FormField.vue';
   import ColorInput from './base/ColorInput.vue';
+  import Toggle from './base/Toggle.vue';
 
   export default {
     name: 'SettingsForm',
     components: {
       FormField,
-      ColorInput
+      ColorInput,
+      Toggle
+    },
+
+    data() {
+      return {
+        foo: false
+      }
     },
 
     computed: {
@@ -68,6 +98,15 @@
             accum[key] = this.$store.state.settings[key];
             return accum;
           }, {});
+      },
+
+      allBlocks() {
+        return [].concat(
+          this.$store.state.layout.leftCol,
+          this.$store.state.layout.rightCol,
+          this.$store.state.layout.leftP2Col,
+          this.$store.state.layout.rightP2Col
+        );
       }
     },
 
@@ -78,6 +117,22 @@
         settings[type] = value;
 
         this.$store.commit('updateSettings', settings);
+      },
+
+      isEnabledBlock(block) {
+        return this.$store.state.enabledBlocks.includes(block);
+      },
+
+      togglePage2() {
+        this.$store.commit('toggleP2');
+      },
+
+      toggleBlock(block) {
+        if (this.isEnabledBlock(block)) {
+          return this.$store.commit('disableBlock', block);
+        } else {
+          return this.$store.commit('enableBlock', block);
+        }
       }
     }
   }
