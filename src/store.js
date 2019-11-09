@@ -15,6 +15,7 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
 
   state: {
+    contentFontSize: 16,
     enabledP2: false,
     enabledBlocks: [
       'MainInfo',
@@ -164,6 +165,10 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    updateContentFontSize(state, value) {
+      state.contentFontSize = value;
+    },
+
     toggleP2(state) {
       state.enabledP2 = !state.enabledP2;
     },

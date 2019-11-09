@@ -1,5 +1,7 @@
 <template lang="html">
-  <div class="content drag">
+  <div
+    class="content drag"
+    v-bind:style="contentStyles">
     <div class="page">
       <div
         class="page__left-col"
@@ -77,6 +79,12 @@
     },
 
     computed: {
+      contentStyles() {
+        return {
+          fontSize: `${this.$store.state.contentFontSize}px`
+        }
+      },
+
       isPage2Enabled() {
         return this.$store.state.enabledP2;
       },

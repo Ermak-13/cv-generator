@@ -9,6 +9,7 @@
           label="Цвет фона:">
           <ColorInput
             id="content__left-col-bg-color"
+            class="form__input"
             v-bind:value="settings.leftColBGColor"
             v-on:input="onInputSettings('leftColBGColor', $event)" />
         </FormField>
@@ -18,6 +19,7 @@
           label="Цвет текста:">
           <ColorInput
             id="content__left-col-color"
+            class="form__input"
             v-bind:value="settings.leftColColor"
             v-on:input="onInputSettings('leftColColor', $event)" />
         </FormField>
@@ -33,6 +35,7 @@
           label="Цвет фона:">
           <ColorInput
             id="content__right-col-bg-color"
+            class="form__input"
             v-bind:value="settings.rightColBGColor"
             v-on:input="onInputSettings('rightColBGColor', $event)" />
         </FormField>
@@ -42,6 +45,7 @@
           label="Цвет текста:">
           <ColorInput
             id="content__right-col-color"
+            class="form__input"
             v-bind:value="settings.rightColColor"
             v-on:input="onInputSettings('rightColColor', $event)" />
         </FormField>
@@ -50,6 +54,15 @@
 
     <fieldset class="form__fieldset">
       <div class="form__fieldset-content">
+        <FormField
+          name="content__font-size"
+          label="Размер шрифта:">
+          <Input
+            type="number"
+            class="form__input"
+            v-bind:value="$store.state.contentFontSize"
+            v-on:input="onInputFontSize($event.target.value)" />
+        </FormField>
         <Toggle
           label="Нужна 2-ая страница?"
           v-bind:value="$store.state.enabledP2"
@@ -119,6 +132,10 @@
         this.$store.commit('updateSettings', settings);
       },
 
+      onInputFontSize(value) {
+        this.$store.commit('updateContentFontSize', value);
+      },
+
       isEnabledBlock(block) {
         return this.$store.state.enabledBlocks.includes(block);
       },
@@ -139,4 +156,7 @@
 </script>
 
 <style scoped>
+.form__input {
+  width: 100%;
+}
 </style>
