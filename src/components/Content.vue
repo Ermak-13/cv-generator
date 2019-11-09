@@ -157,6 +157,7 @@
   }
 
   .page {
+    position: relative;
     display: grid;
     width: 210mm;
     min-height: 297mm;
@@ -166,6 +167,18 @@
     box-sizing: border-box;
     margin: 25px 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .page::after {
+    content: '';
+
+    position: absolute;
+    top: 297mm;
+    z-index: 1;
+
+    width: 100%;
+    height: 1px;
+    background-color: #FF0000;
   }
 
   .page__left-col,
@@ -180,6 +193,10 @@
   @media print {
     .page {
       margin: 0;
+    }
+
+    .page::after {
+      display: none;
     }
   }
 </style>
