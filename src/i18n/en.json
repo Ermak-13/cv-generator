@@ -1,0 +1,117 @@
+{
+  "sidebar": {
+    "title": "CV Generator",
+    "text": "You can drag & drop blocks/secions."
+  },
+
+  "settingsForm": {
+    "leftColLegend": "Left column",
+    "rightColLegend": "Right column",
+    "blocksLegend": "Blocks",
+
+    "bgColorLabel": "Background color:",
+    "textColorLabel": "Text color:",
+    "fontSizeLabel": "Font size:",
+    "page2Label": "Do you need 2 pages?"
+  },
+  "downloadPDF": "Download PDF",
+  "settingsModal": {
+    "title": "Settings"
+  },
+
+  "about": {
+    "title": "About Me",
+    "form": {
+      "htmlEditorLabel": "Content:"
+    }
+  },
+
+  "contacts": {
+    "title": "Contacts",
+    "form": {
+      "phoneLabel": "Phone:",
+      "emailLabel": "Email:",
+      "websiteLabel": "Website:"
+    }
+  },
+
+  "educations": {
+    "title": "Educations",
+    "modal": {
+      "title": "Add university"
+    },
+    "form": {
+      "universityLabel": "University:",
+      "facultyLabel": "Faculty:",
+      "degreeLabel": "Degree:",
+      "startedAtLabel": "Started at (year):",
+      "finishedAtLabel": "Finished at (year):",
+      "button": "Add"
+    }
+  },
+
+  "jobs": {
+    "title": "Jobs",
+    "modal": {
+      "title": "Add job"
+    },
+    "form": {
+      "companyLabel": "Company:",
+      "positionLabel": "Position:",
+      "startedAtLabel": "Started at:",
+      "finishedAtLabel": "Finished at:",
+      "descriptionLabel": "Description:",
+      "button": "Add"
+    }
+  },
+
+  "languages": {
+    "title": "Languages",
+    "language": "Language",
+    "level": "Level",
+    "action": "Action",
+    "modal": {
+      "title": "Add language"
+    },
+    "form": {
+      "colorLabel": "Bar color:",
+      "laguageLabel": "Language:",
+      "levelLabel": "Level (value):",
+      "suggestionLabel": "Level (text):",
+      "button": "Add"
+    }
+  },
+
+  "mainInfo": {
+    "form": {
+      "photoLabel": "Photo:",
+      "fullNameLabel": "Full name:",
+      "positionLabel": "Position:"
+    }
+  },
+
+  "projects": {
+    "title": "Portfolio",
+    "modal": {
+      "title": "Add project"
+    },
+    "form": {
+      "titleLabel": "Title:",
+      "urlLabel": "URL:",
+      "imageLabel": "Photo:",
+      "descriptionLabel": "Description:",
+      "button": "Add"
+    }
+  },
+
+  "skills": {
+    "title": "Skills",
+    "modal": {
+      "title": "Add skill"
+    },
+    "form": {
+      "nameLabel": "Skill:",
+      "button": "Add"
+    }
+  }
+}

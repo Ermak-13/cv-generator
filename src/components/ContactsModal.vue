@@ -2,12 +2,14 @@
   <Modal2Cols name="contacts">
     <div class="modal__col">
       <section class="section">
-        <h1 class="section__h section__h--modal">Настройки</h1>
+        <h1 class="section__h section__h--modal">
+          {{ $t('settingsModal.title') }}
+        </h1>
 
         <form class="form">
           <FormField
             name="contacts__phone"
-            label="Телефон:">
+            v-bind:label="$t('contacts.form.phoneLabel')">
             <Input
               id="contacts__phone"
               type="tel"
@@ -17,7 +19,7 @@
 
           <FormField
             name="contacts__email"
-            label="Email:">
+            v-bind:label="$t('contacts.form.emailLabel')">
             <Input
               id="contacts__email"
               type="email"
@@ -27,7 +29,7 @@
 
           <FormField
             name="contacts__site"
-            label="Сайт:">
+            v-bind:label="$t('contacts.form.websiteLabel')">
             <Input
               id="contacts__site"
               type="url"

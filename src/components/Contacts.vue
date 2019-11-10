@@ -1,7 +1,7 @@
 <template lang="html">
   <Section
     name="contacts"
-    title="Контакты"
+    v-bind:title="$t('contacts.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <dl class="contacts__list">
       <div class="contacts__item"

@@ -2,10 +2,13 @@
   <Modal2Cols name="main-info">
     <div class="modal__col">
       <section class="section">
-        <h1 class="section__h section__h--modal">Настройки</h1>
+        <h1 class="section__h section__h--modal">
+          {{ $t('settingsModal.title') }}
+        </h1>
 
         <form class="form">
-          <FormField label="Фотография:">
+          <FormField
+            v-bind:label="$t('mainInfo.form.photoLabel')">
             <ImgInput
               v-bind:value="undefined"
               v-on:input="onInputMainInfo('img', $event)" />
@@ -13,7 +16,7 @@
 
           <FormField
             name="main-info__full-name"
-            label="ФИО:">
+            v-bind:label="$t('mainInfo.form.fullNameLabel')">
             <Input
               id="main-info__full-name"
               v-bind:value="mainInfo.fullName"
@@ -22,7 +25,7 @@
 
           <FormField
             name="main-info__position"
-            label="Должность:">
+            v-bind:label="$t('mainInfo.form.positionLabel')">
             <HTMLEditor id="main-info__position"
               v-bind:value="mainInfo.position"
               v-on:input="onInputMainInfo('position', $event)" />

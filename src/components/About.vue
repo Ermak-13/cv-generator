@@ -1,7 +1,7 @@
 <template lang="html">
   <Section
     name="about"
-    title="О себе"
+    v-bind:title="$t('about.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <div
       class="about__content editor-html"

@@ -1,13 +1,14 @@
 <template lang="html">
   <Section
     name="jobs"
-    title="Работа"
+    v-bind:title="$t('jobs.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
 
     <ol class="jobs__list">
       <li
         class="jobs__item"
-        v-for="(job, i) in this.$store.state.jobs">
+        v-for="(job, i) in this.$store.state.jobs"
+        v-bind:key="i">
         <article class="job">
           <h1 class="job__h">{{ job.company }}</h1>
           <div class="job__subh">

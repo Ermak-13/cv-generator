@@ -1,12 +1,14 @@
 <template lang="html">
   <form class="sidebar__form form" v-on:submit.prevent="onSubmit">
     <fieldset class="form__fieldset form__fieldset--left-col">
-      <legend class="form__legend">Левая колонка</legend>
+      <legend class="form__legend">
+        {{ $t('settingsForm.leftColLegend') }}
+      </legend>
 
       <div class="form__fieldset-content">
         <FormField
           name="content__left-col-bg-color"
-          label="Цвет фона:">
+          v-bind:label="$t('settingsForm.bgColorLabel')">
           <ColorInput
             id="content__left-col-bg-color"
             class="form__input"
@@ -16,7 +18,7 @@
 
         <FormField
           name="content__left-col-color"
-          label="Цвет текста:">
+          v-bind:label="$t('settingsForm.textColorLabel')">
           <ColorInput
             id="content__left-col-color"
             class="form__input"
@@ -27,12 +29,14 @@
     </fieldset>
 
     <fieldset class="form__fieldset form__fieldset--right-col">
-      <legend class="form__legend">Правая колонка</legend>
+      <legend class="form__legend">
+        {{ $t('settingsForm.rightColLegend') }}
+      </legend>
 
       <div class="form__fieldset-content">
         <FormField
           name="content__right-col-bg-color"
-          label="Цвет фона:">
+          v-bind:label="$t('settingsForm.bgColorLabel')">
           <ColorInput
             id="content__right-col-bg-color"
             class="form__input"
@@ -42,7 +46,7 @@
 
         <FormField
           name="content__right-col-color"
-          label="Цвет текста:">
+          v-bind:label="$t('settingsForm.textColorLabel')">
           <ColorInput
             id="content__right-col-color"
             class="form__input"
@@ -56,7 +60,7 @@
       <div class="form__fieldset-content">
         <FormField
           name="content__font-size"
-          label="Размер шрифта:">
+          v-bind:label="$t('settingsForm.fontSizeLabel')">
           <Input
             type="number"
             class="form__input"
@@ -64,14 +68,16 @@
             v-on:input="onInputFontSize($event.target.value)" />
         </FormField>
         <Toggle
-          label="Нужна 2-ая страница?"
+          v-bind:label="$t('settingsForm.page2Label')"
           v-bind:value="$store.state.enabledP2"
           v-on:input="togglePage2()" />
       </div>
     </fieldset>
 
     <fieldset class="form__fieldset">
-      <legend class="form__legend">Блоки</legend>
+      <legend class="form__legend">
+        {{ $t('settingsForm.blocksLegend') }}
+      </legend>
 
       <div class="form__fieldset-content">
         <Toggle

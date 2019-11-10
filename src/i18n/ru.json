@@ -1,0 +1,117 @@
+{
+  "sidebar": {
+    "title": "CV Generator",
+    "text": "Блоки/секции можно перетаскивать и располагать в наилучшим для вас виде."
+  },
+
+  "settingsForm": {
+    "leftColLegend": "Левая колонка",
+    "rightColLegend": "Правая колонка",
+    "blocksLegend": "Блоки",
+
+    "bgColorLabel": "Цвет фона:",
+    "textColorLabel": "Цвет текста:",
+    "fontSizeLabel": "Размер шрифта:",
+    "page2Label": "Нужна 2-ая страница?"
+  },
+  "downloadPDF": "Скачать PDF",
+  "settingsModal": {
+    "title": "Настройки"
+  },
+
+  "about": {
+    "title": "О себе",
+    "form": {
+      "htmlEditorLabel": "Контент:"
+    }
+  },
+
+  "contacts": {
+    "title": "Контакты",
+    "form": {
+      "phoneLabel": "Телефон:",
+      "emailLabel": "Email:",
+      "websiteLabel": "Сайт:"
+    }
+  },
+
+  "educations": {
+    "title": "Образование",
+    "modal": {
+      "title": "Добавить университет"
+    },
+    "form": {
+      "universityLabel": "Университет:",
+      "facultyLabel": "Факультет:",
+      "degreeLabel": "Степень:",
+      "startedAtLabel": "Начало (год):",
+      "finishedAtLabel": "Конец (год):",
+      "button": "Добавить"
+    }
+  },
+
+  "jobs": {
+    "title": "Работа",
+    "modal": {
+      "title": "Добавить работу"
+    },
+    "form": {
+      "companyLabel": "Компания:",
+      "positionLabel": "Должность:",
+      "startedAtLabel": "Начало:",
+      "finishedAtLabel": "Конец:",
+      "descriptionLabel": "Описание:",
+      "button": "Добавить"
+    }
+  },
+
+  "languages": {
+    "title": "Языки",
+    "language": "Язык",
+    "level": "Уровень",
+    "action": "Действие",
+    "modal": {
+      "title": "Добавить язык"
+    },
+    "form": {
+      "colorLabel": "Цвет бара:",
+      "laguageLabel": "Язык:",
+      "levelLabel": "Уровень (значение):",
+      "suggestionLabel": "Уровень (подсказка):",
+      "button": "Добавить"
+    }
+  },
+
+  "mainInfo": {
+    "form": {
+      "photoLabel": "Фотография:",
+      "fullNameLabel": "ФИО:",
+      "positionLabel": "Должность:"
+    }
+  },
+
+  "projects": {
+    "title": "Портфолио",
+    "modal": {
+      "title": "Добавить проект"
+    },
+    "form": {
+      "titleLabel": "Заголовок:",
+      "urlLabel": "URL:",
+      "imageLabel": "Фото:",
+      "descriptionLabel": "Описание:",
+      "button": "Добавить"
+    }
+  },
+
+  "skills": {
+    "title": "Навыки",
+    "modal": {
+      "title": "Добавить навык"
+    },
+    "form": {
+      "nameLabel": "Навык:",
+      "button": "Добавить"
+    }
+  }
+}

@@ -2,12 +2,14 @@
   <Modal2Cols name="about">
     <div class="modal__col">
       <section class="section">
-        <h1 class="section__h section__h--modal">Настройки</h1>
+        <h1 class="section__h section__h--modal">
+          {{ $t('settingsModal.title') }}
+        </h1>
 
         <form class="form">
           <FormField
             name="about__content"
-            label="Контент:">
+            v-bind:label="$t('about.form.htmlEditorLabel')">
             <HTMLEditor id="about__content"
               v-bind:value="$store.state.about"
               v-on:input="onInputAbout($event)" />

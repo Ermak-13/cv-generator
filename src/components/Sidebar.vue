@@ -1,12 +1,11 @@
 <template lang="html">
   <aside class="sidebar">
     <h1 class="sidebar__h">
-      CV Generator
+      {{ $t('sidebar.title') }}
     </h1>
 
     <p>
-      Блоки/секции можно перетаскивать и располагать в
-      наилучшим для вас виде.
+      {{ $t('sidebar.text') }}
     </p>
 
     <SettingsForm />

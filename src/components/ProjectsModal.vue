@@ -5,7 +5,7 @@
     <div class="modal__col">
       <section class="section">
         <h1 class="section__h section__h--modal">
-          Добавить проект
+          {{ $t('projects.modal.title') }}
         </h1>
 
         <form
@@ -13,7 +13,7 @@
           v-on:submit="onSubmit">
           <FormField
             name="projects__title"
-            label="Заголовок">
+            v-bind:label="$t('projects.form.titleLabel')">
             <Input
               id="projects__title"
               v-bind:value="title"
@@ -22,7 +22,7 @@
 
           <FormField
             name="projects__url"
-            label="Url:">
+            v-bind:label="$t('projects.form.urlLabel')">
             <Input
               id="projects__url"
               type="url"
@@ -32,7 +32,7 @@
 
           <FormField
             name="projects__img"
-            label="Url:">
+            v-bind:label="$t('projects.form.imageLabel')">
             <ImgInput
               id="projects__img"
               v-bind:value="undefined"
@@ -41,7 +41,7 @@
 
           <FormField
             name="projects__description"
-            label="Описание:">
+            v-bind:label="$t('projects.form.descriptionLabel')">
             <HTMLEditor
               id="projects__description"
               v-bind:value="description"
@@ -50,7 +50,9 @@
 
           <button
             type="submit"
-            class="button">Добавить</button>
+            class="button">
+            {{ $t('projects.form.button') }}
+          </button>
         </form>
       </section>
     </div>

@@ -1,20 +1,21 @@
 <template lang="html">
   <Section
     name="languages"
-    title="Языки"
+    v-bind:title="$t('languages.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <table class="languages__table">
       <thead class="languages__thead">
         <tr>
-          <th>Язык</th>
-          <th>Уровень</th>
-          <th v-if="!isHiddenRemoveBtn">Действие</th>
+          <th>{{ $t('languages.language') }}</th>
+          <th>{{ $t('languages.level') }}</th>
+          <th v-if="!isHiddenRemoveBtn">{{ $t('languages.action') }}</th>
         </tr>
       </thead>
       <tbody class="languages__tbody">
         <tr
           class="languages__tr"
-          v-for="(l, i) in $store.state.languages.items">
+          v-for="(l, i) in $store.state.languages.items"
+          v-bind:key="i">
           <td class="languages__td">{{ l.language }}</td>
           <td class="languages__td">
             <div

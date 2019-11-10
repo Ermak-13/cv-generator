@@ -1,13 +1,14 @@
 <template lang="html">
   <Section
     name="skills"
-    title="Навыки"
+    v-bind:title="$t('skills.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
     <ul class="skills__list">
       <li
         class="skills__item"
         v-bind:style="skillStyles"
-        v-for="(skill, i) in $store.state.skills">
+        v-for="(skill, i) in $store.state.skills"
+        v-bind:key="i">
         {{ skill }}
 
         <button

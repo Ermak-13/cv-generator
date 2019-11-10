@@ -1,7 +1,7 @@
 <template lang="html">
   <Section
     name="educations"
-    title="Образование"
+    v-bind:title="$t('educations.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
 
     <ol class="educations__list">

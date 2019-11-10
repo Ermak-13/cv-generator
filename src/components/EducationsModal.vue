@@ -3,7 +3,7 @@
     <div class="modal__col">
       <section class="section">
         <h1 class="section__h section__h--modal">
-          Добавить университет
+          {{ $t('educations.modal.title') }}
         </h1>
 
         <form
@@ -11,7 +11,7 @@
           v-on:submit="onSubmitAddEducation">
           <FormField
             name="educations__university"
-            label="Университет:">
+            v-bind:label="$t('educations.form.universityLabel')">
             <Input
               id="educations__university"
               v-bind:value="university"
@@ -20,7 +20,7 @@
 
           <FormField
             name="educations__faculty"
-            label="Факультет:">
+            v-bind:label="$t('educations.form.facultyLabel')">
             <Input
               id="educations__faculty"
               v-bind:value="faculty"
@@ -29,7 +29,7 @@
 
           <FormField
             name="educations__degree"
-            label="Степень:">
+            v-bind:label="$t('educations.form.degreeLabel')">
             <Input
               id="educations__degree"
               v-bind:value="degree"
@@ -39,7 +39,7 @@
           <div class="educations__period-grid">
             <FormField
               name="educations__started-at"
-              label="Начало (год):">
+              v-bind:label="$t('educations.form.startedAtLabel')">
               <Input
                 id="educations__started-at"
                 type="number"
@@ -49,7 +49,7 @@
 
             <FormField
               name="educations__finished-at"
-              label="Конец (год):">
+              v-bind:label="$t('educations.form.finishedAtLabel')">
               <Input
                 id="educations__finished-at"
                 type="number"
@@ -60,7 +60,9 @@
 
           <button
             type="submit"
-            class="button">Добавить</button>
+            class="button">
+            {{ $t('educations.form.button') }}
+          </button>
         </form>
       </section>
     </div>

@@ -3,7 +3,7 @@
     <div class="modal__col">
       <section class="section">
         <h1 class="section__h section__h--modal">
-          Добавить работу
+          {{ $t('jobs.modal.title') }}
         </h1>
 
         <form
@@ -11,7 +11,7 @@
           v-on:submit="onSubmit">
           <FormField
             name="jobs__company"
-            label="Компания:">
+            v-bind:label="$t('jobs.form.companyLabel')">
             <Input
               id="jobs__company"
               v-bind:value="company"
@@ -20,7 +20,7 @@
 
           <FormField
             name="jobs__position"
-            label="Должность:">
+            v-bind:label="$t('jobs.form.positionLabel')">
             <Input
               id="jobs__position"
               v-bind:value="position"
@@ -30,7 +30,7 @@
           <div class="jobs__period-grid">
             <FormField
               name="jobs__started-at"
-              label="Начало:">
+              v-bind:label="$t('jobs.form.startedAtLabel')">
               <Input
                 id="jobs__started-at"
                 v-bind:value="startedAt"
@@ -39,7 +39,7 @@
 
             <FormField
               name="jobs__finished-at"
-              label="Конец:">
+              v-bind:label="$t('jobs.form.finishedAtLabel')">
               <Input
                 id="jobs__finished-at"
                 v-bind:value="finishedAt"
@@ -49,7 +49,7 @@
 
           <FormField
             name="jobs__description"
-            label="Описание:">
+            v-bind:label="$t('jobs.form.descriptionLabel')">
             <HTMLEditor
               id="jobs__description"
               v-bind:value="description"
@@ -58,7 +58,9 @@
 
           <button
             type="submit"
-            class="button">Добавить</button>
+            class="button">
+            {{ $t('jobs.form.button') }}
+          </button>
         </form>
       </section>
     </div>

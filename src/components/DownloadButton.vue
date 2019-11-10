@@ -2,7 +2,9 @@
   <button
     class="button"
     type="button"
-    v-on:click="onClickDownloadBtn">Скачать PDF</button>
+    v-on:click="onClickDownloadBtn">
+    {{ $t('downloadPDF') }}
+  </button>
 </template>
 
 <script>

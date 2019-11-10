@@ -2,12 +2,14 @@
   <Modal2Cols name="languages">
     <div class="modal__col">
       <section class="section">
-        <h1 class="section__h section__h--modal">Настройки</h1>
+        <h1 class="section__h section__h--modal">
+          {{ $t('settingsModal.title') }}
+        </h1>
 
         <form class="form">
           <FormField
             name="languages__progress-color"
-            label="Цвет бара:">
+            v-bind:label="$t('languages.form.colorLabel')">
             <ColorInput
               id="languages__progress-color"
               v-bind:value="$store.state.languages.progressColor"
@@ -17,12 +19,14 @@
       </section>
 
       <section class="section">
-        <h1 class="section__h section__h--modal">Добавить язык</h1>
+        <h1 class="section__h section__h--modal">
+          {{ $t('languages.modal.title') }}
+        </h1>
 
         <form class="form" v-on:submit="onSubmitAddLanguage">
           <FormField
             name="languages__title"
-            label="Язык:">
+            v-bind:label="$t('languages.form.languageLabel')">
             <Input
               id="languages__title"
               v-bind:value="title"
@@ -31,7 +35,7 @@
 
           <FormField
             name="languages__level-value"
-            label="Уровень (значение):">
+            v-bind:label="$t('languages.form.levelLabel')">
             <RangeInput
               min="0"
               max="100"
@@ -43,7 +47,7 @@
 
           <FormField
             name="languages__level-label"
-            label="Уровень (подсказка):">
+            v-bind:label="$t('languages.form.suggestionLabel')">
             <Input
               id="languages__level-title"
               v-bind:value="levelLabel"
@@ -52,7 +56,9 @@
 
           <button
             class="button"
-            type="submit">Добавить</button>
+            type="submit">
+            {{ $t('languages.form.button') }}
+          </button>
         </form>
       </section>
     </div>

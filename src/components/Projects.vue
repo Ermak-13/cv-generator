@@ -1,7 +1,7 @@
 <template lang="html">
   <Section
     name="projects"
-    title="Портфолио"
+    v-bind:title="$t('projects.title')"
     v-bind:isHiddenSettingsBtn="isHiddenSettingsBtn">
 
     <ul class="projects__list">

@@ -3,7 +3,7 @@
     <div class="modal__col">
       <section class="section">
         <h1 class="section__h section__h--modal">
-          Добавить навык
+          {{ $t('skills.modal.title') }}
         </h1>
 
         <form
@@ -11,7 +11,7 @@
           v-on:submit="onSubmit">
           <FormField
             name="skills__title"
-            label="Навык:">
+            v-bind:label="$t('skills.form.nameLabel')">
             <Input
               id="skills__title"
               v-bind:value="title"
@@ -20,7 +20,9 @@
 
           <button
             type="submit"
-            class="button">Добавить</button>
+            class="button">
+            {{ $t('skills.form.button') }}
+          </button>
         </form>
       </section>
     </div>
