@@ -75,7 +75,7 @@
     },
     "form": {
       "colorLabel": "Цвет бара:",
-      "laguageLabel": "Язык:",
+      "languageLabel": "Язык:",
       "levelLabel": "Уровень (значение):",
       "suggestionLabel": "Уровень (подсказка):",
       "button": "Добавить"

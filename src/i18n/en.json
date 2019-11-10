@@ -75,7 +75,7 @@
     },
     "form": {
       "colorLabel": "Bar color:",
-      "laguageLabel": "Language:",
+      "languageLabel": "Language:",
       "levelLabel": "Level (value):",
       "suggestionLabel": "Level (text):",
       "button": "Add"
